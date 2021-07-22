@@ -1,0 +1,33 @@
+.l-sidebar {
+  padding-left: 46px;
+  > a {
+    display: block;
+    font-size: 34px;
+    font-weight: 600;
+    color: #707070;
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+  ul {
+    li {
+      padding-bottom: 15px;
+      font-size: 24px;
+      > a {
+        color: #707070;
+        font-weight: 700;
+      }
+      ul {
+        padding-top: 32px;
+        padding-left: 18px;
+        li {
+          font-size: 20px;
+          padding-bottom: 30px;
+          a {
+            color: #707070;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

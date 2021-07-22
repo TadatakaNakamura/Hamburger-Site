@@ -1,0 +1,12 @@
+.l-contents {
+  display: flex;
+  &__left {
+    width: 80%;
+    height: 100%;
+  }
+  &__right {
+    width: 20%;
+    height: 100%;
+    background-color: #f2ede9;
+  }
+}
