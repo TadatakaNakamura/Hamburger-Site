@@ -361,25 +361,26 @@ a {
 
 .l-header__form {
   margin-right: 2rem;
+  display: flex;
 }
 
 .l-header__form__box {
   width: 25rem;
-  height: 3rem;
+  height: 48px;
   border-radius: 0.6rem;
-  border: 1px solid #707070;
+  border: solid 1px #707070;
   font-size: 1.6rem;
   font-weight: 500;
 }
 
 .l-header__form__button {
   width: 7rem;
-  height: 3rem;
+  height: 48px;
+  margin-left: 10px;
   background-color: #f2ede9;
   border-radius: 0.6rem;
   border: solid 1px #707070;
   color: #707070;
-  cursor: pointer;
 }
 
 .l-sidebar {
