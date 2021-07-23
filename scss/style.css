@@ -7,12 +7,16 @@
 /* # =================================================================
    # Global selectors
    # ================================================================= */
+@import url();
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   /* Prevent adjustments of font size after orientation changes in iOS */
   word-break: normal;
-  tab-size: 4;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
 }
 
 *,
@@ -20,7 +24,8 @@ html {
 ::after {
   background-repeat: no-repeat;
   /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 ::before,
@@ -74,7 +79,8 @@ abbr[title] {
   /* Remove the bottom border in Chrome 57 */
   /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 a {
@@ -143,20 +149,20 @@ input {
   cursor: default;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
   /* Correct the cursor style of increment and decrement buttons in Chrome */
 }
 
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* Correct the odd appearance in Chrome and Safari */
   outline-offset: -2px;
   /* Correct the outline style in Safari */
 }
 
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
   /* Remove the inner padding in Chrome and Safari on macOS */
 }
@@ -195,35 +201,35 @@ select {
 
 /* Apply cursor pointer to button elements */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"],
-[role="button"] {
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
   cursor: pointer;
   color: inherit;
 }
 
 /* Remove inner padding and border in Firefox 4+ */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 /* Replace focus style removed in the border reset above */
 button:-moz-focusring,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   outline: 1px dotted ButtonText;
 }
 
 button,
-html [type='button'],
-[type='reset'],
-[type='submit'] {
+html [type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
   /* Correct the inability to style clickable types in iOS */
 }
@@ -303,7 +309,7 @@ progress {
      # Accessibility
      # ================================================================= */
 /* Specify the progress cursor of updating elements */
-[aria-busy="true"] {
+[aria-busy=true] {
   cursor: progress;
 }
 
@@ -313,285 +319,22 @@ progress {
 }
 
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-[aria-disabled="true"] {
+[aria-disabled=true] {
   cursor: default;
 }
 
-* {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 .l-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-
 .l-contents__left {
   width: 80%;
   height: 100%;
 }
-
 .l-contents__right {
   width: 20%;
-  height: 2777px;
-  background-color: #f2ede9;
-}
-
-.l-header {
-  width: 100%;
-  height: 12rem;
-  background-color: #fff5ee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.l-header__title {
-  margin-left: 3em;
-  background-color: none;
-}
-
-.l-header__title a {
-  color: #707070;
-  font-size: 2.5em;
-}
-
-.l-header__form {
-  margin-right: 2rem;
-}
-
-.l-header__form__box {
-  width: 25rem;
-  height: 3rem;
-  border-radius: 0.6rem;
-  border: 1px solid #707070;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.l-header__form__button {
-  width: 7rem;
-  height: 3rem;
-  background-color: #f2ede9;
-  border-radius: 0.6rem;
-  border: solid 1px #707070;
-  color: #707070;
-  cursor: pointer;
-}
-
-.l-sidebar {
-  padding-left: 46px;
-}
-
-.l-sidebar > a {
-  display: block;
-  font-size: 34px;
-  font-weight: 600;
-  color: #707070;
-  padding-top: 70px;
-  padding-bottom: 90px;
-}
-
-.l-sidebar ul li {
-  padding-bottom: 15px;
-  font-size: 24px;
-}
-
-.l-sidebar ul li > a {
-  color: #707070;
-  font-weight: 700;
-}
-
-.l-sidebar ul li ul {
-  padding-top: 32px;
-  padding-left: 18px;
-}
-
-.l-sidebar ul li ul li {
-  font-size: 20px;
-  padding-bottom: 30px;
-}
-
-.l-sidebar ul li ul li a {
-  color: #707070;
-  font-weight: 500;
-}
-
-.l-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.l-footer {
-  width: 100%;
-  height: 150px;
-  background-color: #9d8670;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.l-footer__section {
-  padding-top: 43px;
-}
-
-.l-footer__section a {
-  position: relative;
-  color: #fff;
-  font-size: 20px;
-  padding: 43px 10px;
-  position: relative;
-}
-
-.l-footer__section a:last-of-type::before {
-  position: absolute;
-  top: 45px;
-  left: -3px;
-  content: "";
-  background-color: #fff;
-  width: 2px;
-  height: 20px;
-}
-
-.l-footer p {
-  color: #fff;
-  padding-top: 39px;
-  font-size: 14px;
-}
-
-.c-wrap {
-  height: 174px;
-  width: 585px;
-  margin: 0 20px 20px;
-  background-color: #eaeaea;
-  opacity: 0.8;
-}
-
-.c-wrap h4 {
-  font-size: 24px;
-  padding: 22px 19px;
-  color: #fff;
-}
-
-.c-wrap p {
-  font-size: 16px;
-  padding: 9px 19px;
-  line-height: 1.5;
-  color: #fff;
-}
-
-.c-layer1 {
-  position: absolute;
-  top: 0;
-  width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 50;
-}
-
-.c-layer2 {
-  position: absolute;
-  top: 0;
-  width: 55%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
-}
-
-.p-front__top {
-  height: 530px;
-  width: 100%;
-  background: url(../img/mainvisual-img/mainvisual-pc.jpg) no-repeat;
-  background-size: cover;
-}
-
-.p-front__top p {
-  font-size: 40px;
-  color: #fff;
-  padding-left: 86px;
-  padding-top: 259px;
-}
-
-.p-front__colum {
-  height: 1400px;
-  display: flex;
-}
-
-.p-front__colum__section {
-  position: relative;
-  height: 1193px;
-  width: 625px;
-  margin: 100px 60px;
-}
-
-.p-front__colum__section h2 {
-  position: relative;
-  font-size: 3.5rem;
-  padding-top: 30px;
-  padding-left: 20px;
-  color: #eaeaea;
-}
-
-.p-front__colum__section h2::after {
-  position: absolute;
-  top: 140px;
-  left: 26px;
-  content: "";
-  width: 60px;
-  height: 6px;
-  background-color: #eaeaea;
-}
-
-.p-front__colum .takeout {
-  background: url(../img/c-wrap_takeout.png) no-repeat;
-}
-
-.p-front__colum .eatin {
-  background: url(../img/c-wrap_eatin.png) no-repeat;
-}
-
-.p-front__map {
-  position: relative;
-  width: 100%;
-}
-
-.p-front__map__section {
-  position: absolute;
-  width: 55%;
-  top: 0;
-  padding: 80px 80px 0 100px;
-  z-index: 100;
-}
-
-.p-front__map__section h3 {
-  color: #fff;
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.p-front__map__section h3::after {
-  position: absolute;
-  content: "";
-  width: 90px;
-  height: 3px;
-  background-color: #fff;
-  top: 200px;
-  left: 100px;
-}
-
-.p-front__map__section p {
-  padding-top: 127px;
-  color: #fff;
-  line-height: 1.8;
-  font-size: 16px;
-}
-
-.p-box {
-  position: absolute;
-  bottom: 0;
+  background-color: #f1984f;
 }
 /*# sourceMappingURL=style.css.map */
