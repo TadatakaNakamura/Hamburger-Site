@@ -1,24 +1,5 @@
-.l-contents {
+.p-contents {
   display: flex;
-  &__left {
-    width: 80%;
-    height: 100%;
-    @include tab {
-      width: 100%;
-    }
-  }
-  &__right {
-    width: 20%;
-    height: inherit;
-    background-color: #f2ede9;
-    @include tab {
-      position: fixed;
-      left:100%;
-    }
-    &.is-open{
-      z-index: 200;
-      left: 60%;
-      width: 40%;
-    }
-  }
+  flex-direction: column;
+  align-items: center;
 }

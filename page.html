@@ -10,22 +10,23 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+
   <body>
-    <div class="l-contents">
-      <article class="l-contents__left">
+    <main class="l-main">
+      <article class="l-main__left">
         <header class="l-header">
           <div class="l-header__title">
             <a>
               <h1>Hamburger</h1>
             </a>
           </div>
-          <form class="l-header__form">
-            <input type="text" class="l-header__form__box"  name="search"　value="&#xf002;">
-            <input type="submit" class="l-header__form__button"  value="検索">
+          <form class="l-header__right p-search-form">
+            <input type="text" class="p-search-form__box"  name="search"　value="&#xf002;">
+            <input type="submit" class="p-search-form__button"  value="検索">
           </form>
         </header>
 
-        <main class="l-main">
+        <div class="p-contents">
 
           <div class="p-page__top">
             <h1>ショップについて</h1>
@@ -139,10 +140,10 @@
             </div>
 
           </div>
-        </main>
+        </div>
       </article>
 
-      <aside class="l-contents__right">
+      <aside class="l-main__right">
         <div class="l-sidebar">
           <a href="#">Menu</a>
           <ul>
@@ -181,7 +182,9 @@
          </div>
       </aside>
 
-    </div>
+    </main>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/style.js"></script>
 
   </body>
 
@@ -190,7 +193,9 @@
       <a href="#">ショップ情報</a>
       <a href="#">ヒストリー</a>
     </div>
-    <p>Copyright : RaiseTech</p>
+    <p>
+      <small>Copyright : RaiseTech</small>
+    </p>
   </footer>
 
 </html>
