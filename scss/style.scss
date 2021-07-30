@@ -4,6 +4,7 @@
 
 @import "foundation/reset";
 @import "foundation/base";
+@import "foundation/mixin";
 
 // ==========================================================================
 // Layout
@@ -38,6 +39,8 @@
 @import "object/project/pagenation";
 @import "object/project/single";
 @import "object/project/picture";
+@import "object/project/page";
+@import "object/project/bar";
 
 // -----------------------------------------------------------------
 // Utility

@@ -334,19 +334,45 @@ a {
   height: 100%;
 }
 
+@media (max-width: 1024px) {
+  .l-contents__left {
+    width: 100%;
+  }
+}
+
 .l-contents__right {
   width: 20%;
   height: inherit;
   background-color: #f2ede9;
 }
 
+@media (max-width: 1024px) {
+  .l-contents__right {
+    position: fixed;
+    left: 100%;
+  }
+}
+
+.l-contents__right.is-open {
+  z-index: 200;
+  left: 60%;
+  width: 40%;
+}
+
 .l-header {
   width: 100%;
-  height: 12rem;
+  height: 217px;
   background-color: #fff5ee;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .l-header {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 .l-header__title {
@@ -354,9 +380,15 @@ a {
   background-color: none;
 }
 
+@media (max-width: 1024px) {
+  .l-header__title {
+    margin-left: 20px 0;
+  }
+}
+
 .l-header__title a {
   color: #707070;
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 .l-header__form {
@@ -364,9 +396,16 @@ a {
   display: flex;
 }
 
+@media (max-width: 1024px) {
+  .l-header__form {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
 .l-header__form__box {
   width: 25rem;
-  height: 48px;
+  height: 46px;
   border-radius: 0.6rem;
   border: solid 1px #707070;
   font-size: 1.6rem;
@@ -387,6 +426,12 @@ a {
   padding-left: 46px;
 }
 
+@media (max-width: 1024px) {
+  .l-sidebar {
+    padding-top: 100px;
+  }
+}
+
 .l-sidebar > a {
   display: block;
   font-size: 34px;
@@ -394,6 +439,12 @@ a {
   color: #707070;
   padding-top: 70px;
   padding-bottom: 90px;
+}
+
+@media (max-width: 1024px) {
+  .l-sidebar > a {
+    display: none;
+  }
 }
 
 .l-sidebar ul li {
@@ -533,6 +584,40 @@ a {
 .c-button {
   width: 100%;
   padding-bottom: 60px;
+}
+
+.c-button__close {
+  cursor: pointer;
+}
+
+.c-button__close.is-open {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  right: 0;
+}
+
+.c-button__close.is-open::before {
+  content: "";
+  height: 2.5px;
+  width: 24px;
+  right: 13px;
+  top: 48%;
+  display: block;
+  position: absolute;
+  background-color: #121212;
+}
+
+.c-button__close.is-open::after {
+  content: "";
+  height: 24px;
+  width: 2.5px;
+  right: 24px;
+  top: 26%;
+  display: block;
+  position: absolute;
+  background-color: #121212;
 }
 
 .c-button button {
@@ -942,5 +1027,147 @@ a {
 
 .p-picture__tile img {
   width: 33%;
+}
+
+.p-page__top {
+  width: 100%;
+  height: 500px;
+  background: url(../img/mainvisual-img/page-top.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.p-page__top h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 600;
+  padding-left: 86px;
+}
+
+.p-page__wrap {
+  padding: 30px 90px;
+}
+
+.p-page__wrap__text * {
+  padding: 33px 0;
+}
+
+.p-page__wrap__text h2,
+.p-page__wrap__text h3,
+.p-page__wrap__text h4,
+.p-page__wrap__text h5,
+.p-page__wrap__text h6 {
+  font-weight: 700;
+}
+
+.p-page__wrap__text h2 {
+  font-size: 36px;
+}
+
+.p-page__wrap__text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.p-page__wrap__text h3 {
+  font-size: 28px;
+}
+
+.p-page__wrap__text h4,
+.p-page__wrap__text h5,
+.p-page__wrap__text h6 {
+  font-size: 20px;
+}
+
+.p-page__wrap__quote {
+  width: 100%;
+  height: 320px;
+  background-color: #f5f5f5;
+}
+
+.p-page__wrap__quote * {
+  font-size: 16px;
+}
+
+.p-page__wrap__quote blockquote,
+.p-page__wrap__quote p {
+  padding: 50px 60px 0 50px;
+}
+
+.p-page__wrap__quote blockquote {
+  line-height: 1.6;
+}
+
+.p-page__wrap__list {
+  width: 100%;
+  padding: 67px;
+  font-size: 16px;
+}
+
+.p-page__wrap__list ol {
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+.p-page__wrap__list ol li {
+  list-style: decimal;
+}
+
+.p-page__wrap__list ol li ol {
+  padding: 30px 20px;
+}
+
+.p-page__wrap__list ul {
+  line-height: 1.6;
+}
+
+.p-page__wrap__list ul li ul {
+  padding: 30px 20px;
+}
+
+.p-page__wrap__code {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.p-page__wrap__code code {
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+}
+
+.p-page__bold {
+  margin-bottom: 300px;
+}
+
+.p-page__bold p {
+  font-weight: bold;
+}
+
+.p-bar {
+  display: none;
+  top: 20px;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  text-align: right;
+  z-index: 100;
+}
+
+.p-bar__button {
+  font-size: 30px;
+  font-weight: bold;
+  color: #707070;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .p-bar {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

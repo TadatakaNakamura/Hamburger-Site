@@ -1,5 +1,8 @@
 .l-sidebar {
   padding-left: 46px;
+  @include tab {
+    padding-top: 100px;
+  }
   > a {
     display: block;
     font-size: 34px;
@@ -7,6 +10,9 @@
     color: #707070;
     padding-top: 70px;
     padding-bottom: 90px;
+    @include tab {
+      display: none;
+    }
   }
   ul {
     li {
